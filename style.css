@@ -1,0 +1,329 @@
+        
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(180deg, #F6F6F6 0%, #A3A2A2 72.92%, #6F6B6B 100%);
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main-btn {
+  background-color: #FF9B2D;
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  color: var(--yellow-color);
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: #FF9B2D;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Start Navbar */
+.navbar {
+  background-color: #454040;
+  fill: #454040;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: #FF9B2D;
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+  color: #FF9B2D;
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: #FF9B2D;
+}
+/* Start Landing */
+.landing {
+
+background: linear-gradient(180deg, #454040 0%, rgba(54, 53, 53, 0.00) 100%);
+min-height: calc(100vh - 72px);
+
+}
+
+/* End Landing */
+
+.part1 {
+  position: relative;
+  height: 100vh;
+
+}
+.part1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  right: 0;
+  background-color: #434040;
+  z-index: -1;
+  clip-path: polygon(
+    50% 0,
+    100% 0,
+    100% 100%,
+    30% 100%
+  );
+}
+
+@media screen and (max-width: 450px)  {
+  .part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vh;
+    height: 100%;
+
+  }
+  .me {
+    width: 300px !important;
+    height: 250px !important;
+  }
+  .text {
+    font-size: 30px;
+  }
+  .ich{
+    font-size: 40px;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .list-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+@media screen and (max-width: 850px)  {
+  .part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vh;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  .me {
+    width: 400px !important;
+    height: 350px !important;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.me {
+border-radius: 999%;
+width: 500px;
+height: 477px;
+}
+
+.text {
+color: #FF9B2D;
+width: 171px;
+height: 58px;
+text-align: center;
+font-size: 50px;
+font-style: normal;
+line-height: normal;
+text-align: center;
+width: 100%;
+}
+.ich {
+  color: #FF9B2D;
+  text-align: center;
+font-size: 70px;
+line-height: normal;
+font-family: Raleway;
+}
+
+
+
+/* Start Our Work */
+.our-work {
+  background-color: #434040;
+}
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 76%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* End Our Work */
+
+
+/* start about  */
+
+.about, .about__anchor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; 
+}
+.bJCmFu {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.35538em;
+  color: rgb(0, 0, 0);
+  border: 10px solid black;
+  padding: 25px 65px;
+}
+
+.eSbheu {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+.about {
+  padding-top: 130px;
+  background: radial-gradient(50% 50% at 50% 50%,rgba(26,21,21,0) 0,rgba(1,1,1,.16) 100%),#fff;
+  mix-blend-mode: normal;
+  background-color: #fff;
+}
+.about__paragraph {
+  text-align: justify;
+  margin-top: 70px;
+  width: 70%;
+  max-width: 760px;
+}
+.jPgegk {
+  background: none 0px 0px repeat scroll transparent;
+  border: medium none;
+  display: block;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  padding: 13px 30px;
+  color: black;
+  transition: all 0.5s ease 0.2s, margin-left 0.5s ease 0s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.about__button {
+  margin-top: 50px;
+}
+.about__separator {
+  margin-top: 100px;
+  width: 200px;
+  height: auto;
+}
+.services, .skill {
+  display: flex;
+  justify-content: center;
+}
+
+
+.service {
+  max-width: 370px;
+  width: 100%;
+  position: relative;
+  margin-top: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
+  flex-wrap: wrap;
+}
+.about__separator {
+  margin-top: 100px;
+  width: 200px;
+  height: auto;
+}
+
+/* en about  */
+/* Start Subscribe */
+.subscribe {
+  background-color: #ffc400;
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: #19283f;
+  color: #ffc400;
+}
+/* End Subscribe */
